@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人信息</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!--你自己的样式文件 -->
+    <link href="assets/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wripper">
+        <h3 class="titleInfo">考勤明细</h3>
+        <div class="col-sm-12">
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-2 pd0">姓名：</div>
+                <div class="col-sm-6 pd0 personInfo">丁真真</div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-sm-5 clear mt40 pd0">
+                考勤日历
+            </div>
+            <div class="col-sm-3 mt40 pd0">
+                <div class="monthLeft col-sm-1 pd0"><img src="assets/img/arrow.jpg" id="preMonth" /></div>
+                <div class="monthSelect col-sm-6 pd0" id="currentDate">2015年12月</div>
+                <div class="monthRight col-sm-1 pd0"><img src="assets/img/arrow.jpg" id="nextMonth" /></div>
+            </div>
+           
+        </div>
+        <div class="clear"></div>
+        <div class="dateBox">
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/calendar.js"></script>
+    <script type="text/javascript">
+    function setCurrentDate() {
+        var currentDate = calendarObj.getCurrentDate()
+        document.querySelector('#currentDate').innerHTML = currentDate.year + '年' + currentDate.month + '月'
+    }
+    document.querySelector('#preMonth').addEventListener('click', function() {
+        var date = calendarObj.preMonth()
+
+        setCurrentDate()
+    })
+    document.querySelector('#nextMonth').addEventListener('click', function() {
+        var date = calendarObj.nextMonth()
+
+        setCurrentDate()
+    })
+    var dataList = [{
+            year: 2017,
+            month: 12,
+            signDays: ['2017-12-25', '2017-12-15']
+        },
+        {
+            year: 2017,
+            month: 11,
+            signDays: ['2017-11-12', '2017-11-18']
+        },
+        {
+            year: 2017,
+            month: 10,
+            signDays: ['2017-10-02', '2017-10-08']
+        },
+        {
+            year: 2017,
+            month: 9,
+            signDays: ['2017-09-11', '2017-09-14']
+        },
+        {
+            year: 2018,
+            month: 2,
+            signDays: ['2018-02-16', '2018-02-14']
+        }
+    ]
+
+    var calendarObj = new Calendar(document.querySelector('.dateBox'), dataList)
+    setCurrentDate()
+    </script>
+</body>
+
+</html>
