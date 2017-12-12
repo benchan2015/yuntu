@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>左边导航</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!--你自己的样式文件 -->
+    <link href="assets/css/custom-styles.css" rel="stylesheet">
+</head>
+<body>
+     <!--左边-->
+      <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				    <li>
+                        <a href="first.html" target="content">
+						<i class="fa fa-sitemap"></i>首页</a>
+                    </li>
+                    <li>
+                        <a href="index.html" target="content">
+						<i class="fa fa-sitemap"></i>新员工录入</a>
+                    </li>
+                    <li>
+                        <a href="query.html" name="content" target="content"><i class="fa fa-qrcode"></i>查询人员</a>
+                    </li>
+                    <li>
+                        <a href="contractMana.html" target="content"><i class="fa fa-edit"></i>合同管理</a>
+                    </li>
+                    <li>
+                        <a href="checkWork.html" target="content"><i class="fa fa-edit"></i>考勤管理<span class="fa arrow"></span></a>
+						 <ul class="nav nav-second-level" >
+                            <li>
+                                <a href="checkWork.html" href="checkWork.html" target="content">考勤查询</a>
+                            </li>
+                            <li>
+                                <a href="checkWorkDetail.html" target="content">考勤明细</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="employeeInfo.html" target="content"><i class="fa fa-sitemap"></i>我的档案</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+     <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
+</body>
+
+</html>

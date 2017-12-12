@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>查询人员</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!--你自己的样式文件 -->
+    <link href="assets/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wripper" class="col-sm-11">
+        <h3 class="titleInfo">待办事宜</h3>
+        <table class="table table-bordered table-hover queryTable">
+            <thead>
+                <tr>
+                    <th width="15%">姓名</th>
+                    <th width="15%">工号</th>
+                    <th width="20%">手机号码</th>
+                    <th width="15%">部门</th>
+                    <th width="15%">岗位</th>
+                    <th width="20%">合同到期日</th>
+                </tr>
+            </thead>
+            <tbody id="expireStaff">
+            </tbody>
+        </table>
+        <div class="pageBox">
+            <a href="#">首页</a>
+            <a href="#">上一页</a>
+            <a href="#" class="actived">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">下一页</a>
+            <a href="#">尾页</a>
+        </div>
+    </div>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+    function getContractExpire() {
+        $.get('http://47.94.244.196:8081/sd_admin_Service/staff/getStaffById.do?staffId=1', function(data, status) {
+            console.log(data.length)
+            console.log(data)
+            if (data && data.length > 0) {
+                for (var i = 0; i < data.length; i++) {
+                    var html = ''
+                    html += '<tr>'
+                    html += '<td>' + data.name + '</td>'
+                    html += '<td>' + data.code + '</td>'
+                    html += '<td>' + data.mobile + '</td>'
+                    html += '<td>' + data.dept + '</td>'
+                    html += '<td>' + data.job + '</td>'
+                    html += '<td>' + data.contractEndTime + '</td></tr>'
+
+                }
+                $('#expireStaff').innerHTML = html
+            }
+
+        })
+    }
+    getContractExpire()
+    </script>
+</body>
+
+</html>
