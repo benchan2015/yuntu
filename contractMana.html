@@ -21,18 +21,18 @@
                 <div class="form-group col-sm-6">
                     <label class="control-label labelSpecial">工号</label>
                     <div class="col-sm-8">
-                        <input type="number" class="form-control" placeholder="请输入工号">
+                        <input type="number" class="form-control" placeholder="请输入工号" id="contractCode">
                     </div>
                 </div>
                 <div class="form-group col-sm-6">
                     <label class="control-label labelSpecial">姓&nbsp;&nbsp;&nbsp;&nbsp;名</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" placeholder="请输入姓名">
+                        <input type="text" class="form-control" placeholder="请输入姓名" id="contractName">
                     </div>
                 </div>
             </div>
             <div class="col-sm-2 pd0">
-                <button class="searchSubmit btn-danger">查询</button>
+                <button class="searchSubmit btn-danger" type="button" id="contractSearch">查询</button>
             </div>
         </form>
         <table class="table table-bordered table-hover queryTable">
@@ -44,55 +44,11 @@
                     <th>操作</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>张三</td>
-                    <td>25</td>
-                    <td>2012.05.30-2017.05-30</td>
-                    <td>
-                        <div class="selectCheck"><a href="#">修改</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>李四</td>
-                    <td>26</td>
-                    <td>2012.05.30-2017.05-30</td>
-                    <td>
-                        <div class="selectCheck"><a href="#">修改</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>网二</td>
-                    <td>40</td>
-                    <td>2012.05.30-2017.05-30 </td>
-                    <td>
-                        <div class="selectCheck"><a href="#">修改</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>张三</td>
-                    <td>25</td>
-                    <td>2012.05.30-2017.05-30</td>
-                    <td>
-                        <div class="selectCheck"><a href="#">修改</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>李四</td>
-                    <td>26</td>
-                    <td>2012.05.30-2017.05-30</td>
-                    <td>
-                        <div class="selectCheck"><a href="#">修改</a></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>网二</td>
-                    <td>40</td>
-                    <td>2012.05.30-2017.05-30 </td>
-                    <td>
-                        <div class="selectCheck"><a href="#">修改</a></div>
-                    </td>
-                </tr>
+            <tbody id="contractContent">
+                
+               
+                
+               
             </tbody>
         </table>
 		<div class="pageBox">
@@ -106,6 +62,9 @@
             <a href="#">尾页</a>
         </div>
     </div>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/ajax.js"></script>
+    <script src="assets/js/contract/index.js"></script>
 </body>
 
 </html>

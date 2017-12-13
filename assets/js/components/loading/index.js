@@ -18,7 +18,8 @@ var loading = function() {
 loading.prototype.init = function() {
 	var style = document.createElement('style')
 	style.innerHTML = this.style
-	var 
+	var dom = document.createElement('div')
+	dom.setAttribute
 }
 loading.prototype.show = function() {
 

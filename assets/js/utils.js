@@ -58,3 +58,19 @@ function transPosition(index) {
             return '部门经理'
     }
 }
+
+//正确的电话格式
+function validatePhone(phone) {
+    if (!(/^1[34578]\d{9}$/.test(phone))) {
+        return false;
+    }
+    return true
+}
+
+// 获取url参数
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+}

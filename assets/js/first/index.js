@@ -12,7 +12,7 @@ function getContractExpire() {
                 for (var i = 0; i < data.length; i++) {
 
                     var html = ''
-                    html += '<tr>'
+                    html += '<tr onclick=redirectDetail('+data[i].staffId+')>'
                     html += '<td>' + data[i].name + '</td>'
                     html += '<td>' + data[i].code + '</td>'
                     html += '<td>' + data[i].mobile + '</td>'
@@ -30,3 +30,6 @@ function getContractExpire() {
    
 }
 getContractExpire()
+function redirectDetail(id){
+    window.location.href='employeeDetail.html?id='+id
+}
