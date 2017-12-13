@@ -11,13 +11,13 @@
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!--你自己的样式文件 -->
     <link href="assets/css/index.css" rel="stylesheet">
-     <link href="assets/css/loading.css" rel="stylesheet">
+    <link href="assets/css/loading.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="wripper" class="col-sm-10">
         <h3 class="titleInfo">新员工录入<small>-基本信息</small></h3>
-        <form class="form-horizontal formContent" role="form">
+        <div class="form-horizontal formContent">
             <div class="form-group col-sm-6">
                 <label class="col-sm-3 control-label">工号</label>
                 <div class="col-sm-7">
@@ -136,7 +136,7 @@
                 </tbody>
             </table>
             <div class="addFamilyContent">
-                <div class="addFamily">添加家庭关系</div>
+                <div class="addFamily" id="addFamily">添加家庭关系</div>
                 <div class="form-horizontal addFamilyBox" id="addRelation">
                     <div class="form-group col-sm-6">
                         <label class="col-sm-3 control-label">关系</label>
@@ -177,8 +177,8 @@
             <div class="workBox" id="workBox">
             </div>
             <div class="addFamilyContent mt20">
-                <div class="addFamily">添加教育培训经历</div>
-                <div class="form-horizontal addFamilyBox" id="addEducation">
+                <div class="addFamily" id="addEducation">添加教育培训经历</div>
+                <div class="form-horizontal addFamilyBox" id="educationForm">
                     <div class="form-group col-sm-6">
                         <label class="col-sm-3 control-label">学校名称</label>
                         <div class="col-sm-7">
@@ -208,13 +208,15 @@
                         <label class="col-sm-3 control-label">学历</label>
                         <div class="col-sm-4">
                             <select class="form-control" id="eduInfo">
-                                <option>博士</option>
-                                <option>硕士</option>
-                                <option>本科</option>
-                                <option>大专</option>
+                                <option value="0">初中及以下</option>
+                                <option value="1">高中</option>
+                                <option value="2">大专</option>
+                                <option value="3">本科</option>
+                                <option value="4">研究生</option>
+                                <option value="5">博士</option>
                             </select>
                         </div>
-                        <div class="col-sm-2 checkbox col-md-offset-1 pd0" id="orFulltime">
+                        <div class="col-sm-2 checkbox col-md-offset-1 pd0 hide" id="orFulltime">
                             <input type="checkbox" value="是"> 是否统招
                         </div>
                     </div>
@@ -234,7 +236,7 @@
             <div class="workBox" id="wordExperence" style="display:none">
             </div>
             <div class="addFamilyContent mt20">
-                <div class="addFamily">添加工作经历</div>
+                <div class="addFamily" id="addWorkExperienceInfo">添加工作经历</div>
                 <div class="form-horizontal addFamilyBox" id="workExperence">
                     <div class="form-group col-sm-6">
                         <label class="col-sm-3 control-label">公司名称</label>
@@ -295,7 +297,7 @@
             <div class="workBox" style="display:none" id="rewardBox">
             </div>
             <div class="addFamilyContent mt20">
-                <div class="addFamily">添加获奖经历</div>
+                <div class="addFamily" id="addReward">添加获奖经历</div>
                 <div class="form-horizontal addFamilyBox" id="rewardExperance">
                     <div class="form-group col-sm-6">
                         <label class="col-sm-3 control-label">获奖名称</label>
@@ -327,7 +329,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
     <div class="errorBg">
         <div class="errorBox">
@@ -346,13 +348,18 @@
             </div>
         </div>
     </div>
-     <div id="loading-dark-theme" class="loading-div">
-        This div has a different theme (dark)
-      </div>
     <script src="assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/components/loading/index.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/ajax.js"></script>
     <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="assets/js/jquery.loading.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/index/addBaseInfo.js"></script>
+    <script src="assets/js/index/addFamilyInfo.js"></script>
+    <script src="assets/js/index/addEducationInfo.js"></script>
+    <script src="assets/js/index/addWorkExperienceInfo.js"></script>
+    <script src="assets/js/index/addRewardInfo.js"></script>
 </body>
 
 </html>

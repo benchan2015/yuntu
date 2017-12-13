@@ -11,13 +11,12 @@
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!--你自己的样式文件 -->
     <link href="assets/css/index.css" rel="stylesheet">
-   
 </head>
 
 <body>
     <div id="wripper" class="col-sm-11">
         <h3 class="titleInfo">查询人员</h3>
-          <form class="form-horizontal formContent" role="form">
+        <form class="form-horizontal formContent" role="form">
             <div class="col-sm-6 pdlf30">
                 <div class="form-group col-sm-6">
                     <label class="control-label labelSpecial">工号</label>
@@ -36,45 +35,43 @@
                 <button class="searchSubmit btn-danger" type="button" id="btnQuery">查询</button>
             </div>
         </form>
-		<!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >		
-            <div id="page-inner"> 
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Advanced Tables -->
-                    <div class="panel">
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover queryTable" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>姓名</th>
-                                            <th>工号</th>
-                                            <th>手机号码</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="queryStaff">
-                                      
-										
-										
-                                    </tbody>
-                                </table>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Advanced Tables -->
+                        <div class="panel">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover queryTable" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>姓名</th>
+                                                <th>工号</th>
+                                                <th>手机号码</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="queryStaff">
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                        <!--End Advanced Tables -->
                     </div>
-                    <!--End Advanced Tables -->
                 </div>
             </div>
-            </div>
-            </div>
-            <!-- /. ROW  -->
+        </div>
+        <div id="divPage"></div>
+        <!-- /. ROW  -->
     </div>
-	<script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/components/loading/index.js"></script>
+    <script type="text/javascript" src="assets/js/components/pagination/index.js"></script>
     <script type="text/javascript" src="assets/js/ajax.js"></script>
     <script src="assets/js/query/index.js"></script>
-  
-   
 </body>
 
 </html>
