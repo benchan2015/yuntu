@@ -1,6 +1,7 @@
 $(function() {
     var baseInfo = null
     var domain = 'http://www.yuntu.com:8081/'
+    $('#code').val($.cookie('code'))
 
     function showMessage(msg, type) {
         if (type == 1) { // 显示confirm框

@@ -36,7 +36,7 @@ $(function() {
                 "fRewardName": rewardName,
                 "fTime": rewardTime,
                 "fRemark": rewardInfo,
-                "fCode": "工号"
+                "fCode": $.cookie('code')
             }],
             callback: function(data) {
                 rewardHmtl += '<div class="workExperence">'

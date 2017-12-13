@@ -1,0 +1,19 @@
+{
+  "name": "yuntu",
+  "version": "1.0.0",
+  "description": "yuntu project",
+  "main": "index.js",
+  "scripts": {
+    "test": "build"
+  },
+  "keywords": [
+    "yuntu"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}

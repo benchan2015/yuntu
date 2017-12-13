@@ -15,62 +15,75 @@
 
 <body>
     <div id="wripper" class="col-sm-8">
-        <h3 class="titleInfo">某某的信息</h3>
+        <h3 class="titleInfo" id="detailTitle"></h3>
         <div class="col-sm-12">
             <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">员工工号：</div>
-                <div class="col-sm-6 pd0 personInfo">1544585</div>
-            </div>
-            <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">目前状态：</div>
-                <div class="col-sm-6 pd0 personInfo">在职</div>
+                <div class="col-sm-3 pd0">工&nbsp;&nbsp;&nbsp;&nbsp;号：</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailCode"></div>
             </div>
             <div class="col-sm-5 mt20">
                 <div class="col-sm-3 pd0">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</div>
-                <div class="col-sm-6 pd0 personInfo" id="detailName">丁珍珍</div>
-                <input class="col-sm-6 personInfo" value="丁珍珍" style="display:none" id="editName" />
-            </div>
-            <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">移动电话：</div>
-                <div class="col-sm-6 pd0 personInfo" id="detailTel">15145452056</div>
-                <input class="col-sm-6 personInfo" value="15145452056" style="display:none" id="editTel" />
+                <div class="col-sm-6 pd0 personInfo" id="detailName"></div>
             </div>
             <div class="col-sm-5 mt20">
                 <div class="col-sm-3 pd0">性&nbsp;&nbsp;&nbsp;&nbsp;别：</div>
-                <div class="col-sm-6 pd0 personInfo">女</div>
-            </div>
-            <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">部&nbsp;&nbsp;&nbsp;&nbsp;门</div>
-                <div class="col-sm-6 pd0 personInfo">客服部</div>
-            </div>
-            <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">入职日期：</div>
-                <div class="col-sm-6 pd0 personInfo">2014-05-25</div>
-            </div>
-            <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">学&nbsp;&nbsp;&nbsp;&nbsp;历</div>
-                <div class="col-sm-6 pd0 personInfo">本科</div>
-            </div>
-            <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">岗位/职务：</div>
-                <div class="col-sm-6 pd0 personInfo">ios开发</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailSex"></div>
             </div>
             <div class="col-sm-5 mt20">
                 <div class="col-sm-3 pd0">身份证号</div>
-                <div class="col-sm-6 pd0 personInfo">522423159871542545</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailIdNumber"></div>
+            </div>
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-3 pd0">学&nbsp;&nbsp;&nbsp;&nbsp;历</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailEducation"></div>
+            </div>
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-3 pd0">移动电话：</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailTel"></div>
+                <input class="col-sm-6 personInfo" value="15145452056" style="display:none" id="editTel" />
+            </div>
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-3 pd0">公司名称：</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailCompany"></div>
+                <select class="col-sm-6 personInfo pd10" style="display:none" id="editCompany">
+                    <option value="1">公司总部</option>
+                    <option value="2">分公司1</option>
+                    <option value="3">分公司2</option>
+                </select>
+            </div>
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-3 pd0">部&nbsp;&nbsp;&nbsp;&nbsp;门</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailDept"></div>
+                <select class="col-sm-6 personInfo pd10" style="display:none" id="editDept">
+                    <option value="1">互联网</option>
+                    <option value="2">客服部</option>
+                </select>
+            </div>
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-3 pd0">入职日期：</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailEnteryTime"></div>
+            </div>
+            <div class="col-sm-5 mt20">
+                <div class="col-sm-3 pd0">岗位/职务：</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailPosition"></div>
+                <select class="col-sm-6 personInfo pd10" style="display:none" id="editPosition">
+                    <option value="1">客服</option>
+                    <option value="2">客服经理</option>
+                    <option value="3">部门经理</option>
+                </select>
             </div>
             <div class="col-sm-5 mt20">
                 <div class="col-sm-3 pd0">家庭地址：</div>
-                <div class="col-sm-9 pd0 personInfo">江苏省南京市玄武区某某小区多少栋某某好</div>
+                <div class="col-sm-9 pd0 personInfo" id="detailMyAddress"></div>
             </div>
             <div class="col-sm-5 mt20">
-                <div class="col-sm-3 pd0">合同：</div>
-                <div class="col-sm-6 pd0 personInfo" id="detailTime">3</div>
-                <input class="col-sm-6  personInfo" value="3" style="display:none" id="editTime" />
+                <div class="col-sm-3 pd0">合同周期：</div>
+                <div class="col-sm-6 pd0 personInfo" id="detailTime"></div>
+         
             </div>
             <div class="col-sm-5 mt20">
                 <div class="col-sm-3 pd0">评价：</div>
-                <div class="col-sm-9 pd0 personInfo">江苏省南京市玄武区某某小区多少栋某某好</div>
+                <div class="col-sm-9 pd0 personInfo" id="detailEvalute"></div>
             </div>
         </div>
         <div class="clear"></div>
@@ -94,80 +107,17 @@
                     <th>联系方式</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>父女</td>
-                    <td>50</td>
-                    <td>
-                        孩子王儿童团用品有效公司
-                    </td>
-                    <td>151254784545</td>
-                </tr>
-                <tr>
-                    <td>母女</td>
-                    <td>50</td>
-                    <td>
-                        孩子王儿童团用品有效公司
-                    </td>
-                    <td>151254784545</td>
-                </tr>
+            <tbody id="detailFamilyRelation">
             </tbody>
         </table>
         <h3 class="titleInfo">教育培训</h3>
-        <div class="workBox">
-            <div class="workExperence">
-                <div class="workTime col-sm-2 col-md-offset-1">2012-7———2014-9</div>
-                <div class="col-sm-9">
-                    <div class="companyName">南京工业大学</div>
-                    <div class="companyInfo clear">
-                        <div class="location col-sm-4 pd0">专业名称：计算机应用与技术</div>
-                        <div class='vacation col-sm-2 pd0'>学历：大专</div>
-                        <div class="position col-sm-2 pd0">是否统招：是</div>
-                    </div>
-                </div>
-            </div>
-            <div class="workExperence">
-                <div class="workTime col-sm-2 col-md-offset-1">2012-7———2014-9</div>
-                <div class="col-sm-9">
-                    <div class="companyName">南京工业大学</div>
-                    <div class="companyInfo clear">
-                        <div class="location col-sm-4 pd0">专业名称：计算机应用与技术</div>
-                        <div class='vacation col-sm-2 pd0'>学历：大专</div>
-                        <div class="position col-sm-2 pd0">是否统招：是</div>
-                    </div>
-                </div>
-            </div>
+        <div class="workBox" id='detailEduExperience'>
         </div>
         <h3 class="titleInfo">工作经历</h3>
-        <div class="workBox">
-            <div class="workExperence">
-                <div class="workTime col-sm-2 col-md-offset-1">2012-7———2014-9</div>
-                <div class="col-sm-9">
-                    <div class="companyName">孩子王儿童团用品有效公司</div>
-                    <div class="companyInfo clear">
-                        <div class="location col-sm-2 pd0">南京</div>
-                        <div class='vacation col-sm-2 pd0'>私营企业</div>
-                        <div class="position col-sm-2 pd0">web前端工程师</div>
-                    </div>
-                    <div class="workContent clear">
-                        主要负责移动端的设计图转为页面的开发 主要负责移动端的设计图转为页面的开发主要负责移动端的设计图转为页面的开发主要负责移动端的设计图转为页面的开发
-                    </div>
-                </div>
-            </div>
-            <div class="workExperence">
-                <div class="workTime col-sm-2 col-md-offset-1">2012-7———2014-9</div>
-                <div class="col-sm-9">
-                    <div class="companyName">孩子王儿童团用品有效公司</div>
-                    <div class="companyInfo clear">
-                        <div class="location col-sm-2 pd0">南京</div>
-                        <div class='vacation col-sm-2 pd0'>私营企业</div>
-                        <div class="position col-sm-2 pd0">web前端工程师</div>
-                    </div>
-                    <div class="workContent clear">
-                        主要负责移动端的设计图转为页面的开发 主要负责移动端的设计图转为页面的开发主要负责移动端的设计图转为页面的开发主要负责移动端的设计图转为页面的开发
-                    </div>
-                </div>
-            </div>
+        <div class="workBox" id="detailWorkExperience">
+        </div>
+        <h3 class="titleInfo">获奖信息</h3>
+        <div class="workBox" id="rewardList">
         </div>
     </div>
     <script src="assets/js/jquery-1.10.2.js"></script>
@@ -175,6 +125,7 @@
     <script type="text/javascript" src="assets/js/ajax.js"></script>
     <script src="assets/js/utils.js"></script>
     <script src="assets/js/exployee/detail.js"></script>
+    <script src="assets/js/exployee/getExployeeInfo.js"></script>
 </body>
 
 </html>

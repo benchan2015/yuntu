@@ -107,3 +107,9 @@ Pagination.prototype.bindEvent = function() {
 
     })
 }
+Pagination.prototype.destroy = function() {
+	$(this.dom).hide()
+}
+Pagination.prototype.reCall = function() {
+	$(this.dom).show()
+}
