@@ -361,7 +361,6 @@ li.in:after {
     display:none;
 }
 .errorBox{
-    
     background:#fff;
     position:fixed;
     min-width:300px;
@@ -394,4 +393,54 @@ li.in:after {
     text-align: center;
     margin:0 auto 10px auto;
 
+}
+.errorBg2{
+    display: none;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.3);
+    position:fixed;
+    top:0px;
+    left:0px;
+    
+}
+.errorBox2{
+    
+    background:#fff;
+    position:fixed;
+    min-width:300px;
+    left:45%;
+    top:50%;
+    transform:translate(-50%,-50%);
+     padding-top: 10px;
+}
+.errorBox2 .title{
+    font-size:18px;
+    color:#F36A5A;
+    
+    text-align:center;
+    border-bottom:1px solid #ddd;
+    line-height:30px;
+    padding-bottom:10px;
+
+}
+.errorBox2 .info{
+    font-size:14px;
+    color:#666;
+    line-height: 24px;
+    margin:20px 0;
+    text-align:center;
+   
+}
+.errorBox2 .button{
+    width:100px;
+    line-height:35px;
+    text-align: center;
+    margin-left:20px;
+    float:left;
+
+}
+.errorSmallBox{
+    display:flex;
+    margin:40px;
+    justify-content: space-between;
 }

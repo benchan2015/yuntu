@@ -41,31 +41,11 @@
             <a href="#">尾页</a>
         </div>
     </div>
+    <script type="text/javascript" src="assets/js/utils.js"></script>
     <script src="assets/js/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-    function getContractExpire() {
-        $.get('http://47.94.244.196:8081/sd_admin_Service/staff/getStaffById.do?staffId=1', function(data, status) {
-            console.log(data.length)
-            console.log(data)
-            if (data && data.length > 0) {
-                for (var i = 0; i < data.length; i++) {
-                    var html = ''
-                    html += '<tr>'
-                    html += '<td>' + data.name + '</td>'
-                    html += '<td>' + data.code + '</td>'
-                    html += '<td>' + data.mobile + '</td>'
-                    html += '<td>' + data.dept + '</td>'
-                    html += '<td>' + data.job + '</td>'
-                    html += '<td>' + data.contractEndTime + '</td></tr>'
-
-                }
-                $('#expireStaff').innerHTML = html
-            }
-
-        })
-    }
-    getContractExpire()
-    </script>
+    <script type="text/javascript" src="assets/js/ajax.js"></script>
+    <script type="text/javascript" src="assets/js/first/index.js"></script>
+    
 </body>
 
 </html>

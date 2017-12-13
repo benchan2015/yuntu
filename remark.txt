@@ -1,0 +1,33 @@
+新增个人信息时的必填项
+工号，姓名，身份证，移动电话
+
+
+根据员工id读取员工信息的接口
+http://47.94.244.196:8081/sd_admin_Service/staff/getStaffById.do?staffId=1
+
+// 线上地址
+http://www.yuntu.com:8081/sd_admin_Service/jsp/main.jsp
+// 本地访问地址
+http://w.yuntu.com/ytrs/
+
+学历
+0初中及以下
+1高中
+2大专
+3本科
+4研究生
+5博士
+
+岗位
+1客服
+2客服经理
+3部门经理
+
+部门
+1 互联网
+2 客服部
+
+公司名称
+1 公司总部
+2 分公司1
+3 分公司2

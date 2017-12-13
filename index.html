@@ -11,6 +11,7 @@
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!--你自己的样式文件 -->
     <link href="assets/css/index.css" rel="stylesheet">
+     <link href="assets/css/loading.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,8 +33,8 @@
             <div class="form-group col-sm-6">
                 <label class="col-sm-3 control-label">性&nbsp;&nbsp;&nbsp;&nbsp;别</label>
                 <div class="col-sm-7" id="sex">
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="男" checked> 男
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="女"> 女
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked> 男
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="2"> 女
                 </div>
             </div>
             <div class="form-group col-sm-6">
@@ -46,10 +47,12 @@
                 <label for="inputPassword3" class="col-sm-3 control-label">学&nbsp;&nbsp;&nbsp;&nbsp;历</label>
                 <div class="col-sm-7">
                     <select class="form-control" id="education">
-                        <option>博士</option>
-                        <option>硕士</option>
-                        <option>本科</option>
-                        <option>大专</option>
+                        <option value="0">初中及以下</option>
+                        <option value="1">高中</option>
+                        <option value="2">大专</option>
+                        <option value="3">本科</option>
+                        <option value="4">研究生</option>
+                        <option value="5">博士</option>
                     </select>
                 </div>
             </div>
@@ -62,42 +65,64 @@
             <div class="form-group col-sm-6">
                 <label class="col-sm-3 control-label">公司名称</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" id="companyName" placeholder="请输入公司名称">
+                    <select class="form-control" id="companyName">
+                        <option value="1">公司总部</option>
+                        <option value="2">分公司1</option>
+                        <option value="3">分公司2</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group col-sm-6">
                 <label for="inputPassword3" class="col-sm-3 control-label">部&nbsp;&nbsp;&nbsp;&nbsp;门</label>
                 <div class="col-sm-7">
                     <select class="form-control" id="depart">
-                        <option>互联网</option>
-                        <option>设计部</option>
+                        <option value="1">互联网</option>
+                        <option value="2">客服部</option>
                     </select>
                 </div>
             </div>
             <div class="form-group col-sm-6">
                 <label class="col-sm-3 control-label">入职日期</label>
-                <div class="col-sm-7" id="entryTime">
-                    <input type="date" class="form-control">
+                <div class="col-sm-7">
+                    <input type="date" class="form-control" id="txtEntryTime">
                 </div>
             </div>
             <div class="form-group col-sm-6">
                 <label class="col-sm-3 control-label">岗位</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" id="post">
+                    <select class="form-control" id="post">
+                        <option value="1">客服</option>
+                        <option value="2">客服经理</option>
+                        <option value="3">部门经理</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group col-sm-6 ">
                 <label class="col-sm-3 control-label">家庭地址</label>
                 <div class="col-sm-7">
-                    <textarea class="form-control" rows="3" placeholder="请输入家庭地址" id="familyAddress"></textarea>
+                    <textarea class="form-control" rows="1" placeholder="请输入家庭地址" id="familyAddress"></textarea>
                 </div>
             </div>
+            <div class="form-group col-sm-6">
+                <label class="col-sm-3 control-label">合同期限</label>
+                <div class="col-sm-7">
+                    <input type="number" class="form-control" id="txtExpire">
+                </div>
+            </div>
+            <div class="clear"></div>
             <div class="form-group col-sm-6 ">
                 <label class="col-sm-3 control-label">评价</label>
                 <div class="col-sm-7">
                     <textarea class="form-control" rows="3" placeholder="请输入评价" id="evaluate"></textarea>
                 </div>
             </div>
+            <div class="col-sm-12 clear">
+                <div class="col-md-offset-1">
+                    <button type="button" class="btn btn-danger buttonSubmit" id="infoSubmit">提交</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <h3 class="titleInfo">家庭关系</h3>
             <table class="table table-bordered queryTable" id="famiRela">
                 <thead>
                     <tr>
@@ -147,10 +172,11 @@
                     </div>
                 </div>
             </div>
+            <div class="clear"></div>
+            <h3 class="titleInfo">教育经历</h3>
             <div class="workBox" id="workBox">
-               
             </div>
-            <div class="addFamilyContent mt20" >
+            <div class="addFamilyContent mt20">
                 <div class="addFamily">添加教育培训经历</div>
                 <div class="form-horizontal addFamilyBox" id="addEducation">
                     <div class="form-group col-sm-6">
@@ -189,7 +215,7 @@
                             </select>
                         </div>
                         <div class="col-sm-2 checkbox col-md-offset-1 pd0" id="orFulltime">
-                            <input type="checkbox" value="是" > 是否统招
+                            <input type="checkbox" value="是"> 是否统招
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -203,9 +229,9 @@
                     </div>
                 </div>
             </div>
+            <div class="clear"></div>
+            <h3 class="titleInfo">工作经历</h3>
             <div class="workBox" id="wordExperence" style="display:none">
-             
-              
             </div>
             <div class="addFamilyContent mt20">
                 <div class="addFamily">添加工作经历</div>
@@ -264,8 +290,9 @@
                     </div>
                 </div>
             </div>
+            <div class="clear"></div>
+            <h3 class="titleInfo">获奖经历</h3>
             <div class="workBox" style="display:none" id="rewardBox">
-               
             </div>
             <div class="addFamilyContent mt20">
                 <div class="addFamily">添加获奖经历</div>
@@ -300,11 +327,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 clear">
-                <div class="col-md-offset-5">
-                    <button type="button" class="btn btn-danger buttonSubmit" id="infoSubmit">提交</button>
-                </div>
-            </div>
         </form>
     </div>
     <div class="errorBg">
@@ -314,7 +336,22 @@
             <div class="button btn-danger" id="errorSure"> 确定</div>
         </div>
     </div>
+    <div class="errorBg2">
+        <div class="errorBox2">
+            <div class="title">温馨提示！</div>
+            <div class="info">您输入的邮箱格式错误，请重新输入</div>
+            <div class="errorSmallBox">
+                <div class="button btn-danger" id="errorSure2"> 确定</div>
+                <div class="button btn-warning" id="errorCancel2"> 取消</div>
+            </div>
+        </div>
+    </div>
+     <div id="loading-dark-theme" class="loading-div">
+        This div has a different theme (dark)
+      </div>
     <script src="assets/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.loading.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 
